@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root" class="container">
+
+        <!-- <h1 v-text = "shared.user.name"></h1> -->
+        <!-- <input type="text" name="" id="" v-model = "coupon">  -->
+        <!-- <input type="text" :value="coupon" @input = "coupon = $event.target.value"> <br><br> -->
+
+        <!-- chapter 25 -->
+
+        <coupon v-model = "coupon" @applied = "couponExpired"></coupon>
+        <h1 v-if="expired">YOUR COUPON IS EITHER EXPIRED OR NOT VALID</h1>
+        
+    </div>
+
+    <div id="root2" class="container">
+        <!-- <h1 v-text = "shared.user.name"></h1> -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>

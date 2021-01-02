@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .color-red{
+        color: red;
+    }
+
+    .is-loading{
+        /* color: blue;
+        padding: 0.5rem;
+        outline: none;
+        border: 0;
+        text-transform: uppercase;
+        box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
+        display: block !important;
+    }
+
+</style>
+<body>
+       <div id="root">
+    
+        <h1 :class = "className">hello jinsan</h1>
+
+        <button :class = "{ 'is-loading': isLoading}" style="display: none;">click me</button>
+        <button @click = "changeClass">toggle</button>
+        <h1 v-text = "new Date()"></h1>
+        <h1>
+            {{message.split('').reverse().join('')}}
+        </h1>
+
+        <h1>Incomplete{{ reversedMessage }}</h1>
+
+        <ul>
+            <li v-for = "task in incompleteTasks" v-text = "task.description"></li>
+        </ul>
+
+        <h1>complete{{ reversedMessage }}</h1>
+
+        <ul>
+            <li v-for = "task in completeTasks" v-text = "task.description"></li>
+        </ul>
+
+        
+       </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <script src = "main.js"></script>
+</body>
+</html>
